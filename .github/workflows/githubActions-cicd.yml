@@ -16,7 +16,7 @@ on:
 
 jobs:
   compile:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       # This permission is required for the dependency submission action
       contents: write
@@ -33,7 +33,7 @@ jobs:
       run: mvn -B package --file pom.xml
       
   security-check:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       # This permission is required for the dependency submission action
       contents: write

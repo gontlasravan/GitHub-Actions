@@ -16,7 +16,7 @@ on:
 
 jobs:
   compile:
-    runs-on: ['self-hosted', 'Linux', 'X64']
+    runs-on: ['ip-10-0-0-5',self-hosted', 'Linux', 'X64']
 
     permissions:
       # This permission is required for the dependency submission action
@@ -34,7 +34,7 @@ jobs:
       run: mvn -B package --file pom.xml
       
   security-check:
-    runs-on: ['self-hosted', 'Linux', 'X64']
+    runs-on: ['ip-10-0-0-5',self-hosted', 'Linux', 'X64']
     permissions:
       # This permission is required for the dependency submission action
       contents: write
